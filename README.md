@@ -33,6 +33,36 @@ Add two file for configuration: _babel.config.json_ and _webpack.config.js_.
 > [!NOTE]
 > The configuration for _babel-loader_ can also be placed in the configuration inside _webpack.config.json_. But by creating a separate Babel configuration file for this, these settings can also be used by other tools in the JavaScript/React ecosystem.
 
+`npm istall --save-dev html-webpack-plugin` to install the package needed to adds the minified bundle code to the body tags as script when application running nd then add it to _webpack.config_ file.
+
+`npm install --save-dev webpack-dev-server` to install a local development server that is restarted every time an update is made to any of you application files and then it's needed to change scrpt command in _package.json_ so that it uses _webpack-dev-server_ instead of _Webpack_ from `"start": "webpack --mode development"` to `"start": "webpack serve –mode development"`. (http://localhost:8080/)
+
+We adds some folder to project structures e create some new _Top-level_ (Containers) and _Low-Level_ components and then we retrieve data using _Rick and Morty_ REST API. (https://rickandmortyapi.com/documentation/#rest)
+
+We'll use the built-in state management in React to store data and we'll use for that the `useState` hook.
+Anything stored in the state can be passed down from the `top-level` components to `low-level` components via `props`
+
+**useState Hook**
+With `useState` hook we can set/store and update these data and every time these data change using the update method that is returned by the `useState Hook` and our component will be re-rendered.
+
+We'll use the Rest Api starting from the analysis of this: https://rickandmortyapi.com/api that returns a Json with all the possible endpoints.
+
+**useEffect Hook**
+`useEffect` Hook can be used to hndle side effects, either when the appication mounts or when the `state` or a `prop` ges updated.
+
+This Hook takes two parameters, where the first one is a callback and the second one is an array containing all of the variables this Hook depends on – the so-called dependency array. When any of these dependencies change, the callback for this Hook will be called. When there are no values in this array, the Hook will be called constantly. After the data is fetched from the source, the state will be updated with the results.
+
+I'll use `useEffect` Hook to retrieve data from the API and then i'll update the state with retrieved data.
+
+
+
+
+
+
+
+
+
+
 
 
 
