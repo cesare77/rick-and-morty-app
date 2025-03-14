@@ -54,6 +54,15 @@ This Hook takes two parameters, where the first one is a callback and the second
 
 I'll use `useEffect` Hook to retrieve data from the API and then i'll update the state with retrieved data.
 
+`npm install --save-dev bootstrap` to install `Bootstrap` package that is a style framework to add style to our simple application and add it to project _devDependecies_, then we add it in the entry point of the application _src/index.js_.
+
+`npm install --save-dev css-loader style-loader` install appropriate loaders to enable Webpack to compile css files and then we'll add these packages as a rule to the Webpack configuration.
+
+> [!NOTE]
+> The order in which loaders are added is important since css-loader handles the compilation of the CSS file and style-loader adds the compiled CSS files to the React DOM. Webpack reads these settings from right to left, and the CSS needs to be compiled before it's attached to the DOM.
+
+I'll make some changes to application components to style it through bootstrap. 
+
 
 
 
